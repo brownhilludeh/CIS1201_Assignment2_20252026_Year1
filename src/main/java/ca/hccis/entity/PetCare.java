@@ -44,6 +44,8 @@ public class PetCare {
 
     // Collect info from user
     public void getInformation() {
+        System.out.println("Total Cost is " + cost);
+
         System.out.print("Enter the name of the pet: ");
         name = scanner.nextLine();
 
@@ -146,16 +148,16 @@ public class PetCare {
     // String representation
     @Override
     public String toString() {
-        return "PetCare {" +
-                "name='" + name + '\'' +
-                ", type='" + type + '\'' +
-                ", breed='" + breed + '\'' +
-                ", age=" + age +
-                ", lengthOfStay='" + lengthOfStay + '\'' +
-                ", weight=" + weight +
-                ", crateTrained=" + crateTrained +
-                ", startDate='" + startDate + '\'' +
-                ", cost=$" + String.format("%.2f", cost) +
-                '}';
+        String output = 
+                "Name: " + name + "\n" +
+                "Type: " + type + "\n" +
+                "Breed: " + breed + "\n" +
+                "Age: " + age + "\n" +
+                "Length of Stay: " + lengthOfStay + "\n" +
+                "Weight: " + weight + "\n" +
+                "Crate Trained: " + crateTrained + "\n" +
+                "Start Date: " + startDate + "\n" +
+                "Cost: " + cost + "\n";
+                return output;
     }
 }
